@@ -31,19 +31,19 @@ The exploratory data analysis examined borrower and loan characteristics to iden
 business_or_commercial, and loan_purpose. Selected figures are included below.
 
 <p align="center">
-  <img src="images/Ph1.png" width="600">
+  <img src="Images/Ph1.png" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Ph2.png" width="600">
+  <img src="Images/Ph2.png" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Ph3.png" width="600">
+  <img src="Images/Ph3.png" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Ph4.png" width="600">
+  <img src="Images/Ph4.png" width="600">
 </p>
 
 These differences indicate that borrowers with different loan and payment characteristics may have different levels of observed default risk, which can help financial institutions identify groups that may require closer credit-risk assessment.
@@ -51,53 +51,53 @@ These differences indicate that borrowers with different loan and payment charac
 Numerical features were also compared between defaulted and non-defaulted borrowers. The largest observed difference was in income, where the average income of defaulted borrowers was lower than that of non-defaulted borrowers. This indicates that income may provide useful information when assessing a borrower's ability to manage loan obligations. property_value also showed a lower average among defaulted borrowers, while dtir1 showed a higher average. A higher dtir1 represents a greater level of debt relative to income, making it a relevant measure when assessing a borrower's financial burden. 
 
 <p align="center">
-  <img src="images/Ph5.png" width="600">
+  <img src="Images/Ph5.png" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Ph6.png" width="600">
+  <img src="Images/Ph6.png" width="600">
 </p>
 
 The correlation analysis further showed meaningful relationships among numerical features, particularly between loan_amount and property_value. This relationship is relevant from a lending perspective because the amount borrowed is connected to the value of the property supporting the loan. 
 
 <p align="center">
-  <img src="images/Ph7.png" width="600">
+  <img src="Images/Ph7.png" width="600">
 </p>
 
 Additional analysis of numerical and categorical features showed that loan amount alone did not display a clear relationship with observed default rates, while categorical characteristics such as lump_sum_payment, Neg_ammortization, and loan_type showed clearer patterns. 
 
 <p align="center">
-  <img src="images/Ph8.png" width="600">
+  <img src="Images/Ph8.png" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Ph9.png" width="600">
+  <img src="Images/Ph9.png" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Ph10.png" width="600">
+  <img src="Images/Ph10.png" width="600">
 </p>
 
 dtir1 levels also revealed variation in default rates, with the lowest observed rates generally occurring in the middle dtir1 ranges and higher rates at both lower and upper ranges. In particular, the 50–60 dtir1 range had the highest overall observed default rate at 42.67%, compared with lower rates across several middle dtir1 ranges. 
 
 
 <p align="center">
-  <img src="images/Ph11.png" width="600">
+  <img src="Images/Ph11.png" width="600">
 </p>
 
 This indicates that borrowers with higher debt relative to income represented a group with substantially higher observed default rates in the dataset. The relationship between dtir1 and loan characteristics also varied across groups, suggesting that borrower and loan characteristics may provide more useful information when considered together rather than individually.
 Moreover, Income shows a generally negative association with observed default rates across most categories, but the strength and consistency of the pattern differ by category. The lpsm category is the main exception, showing high and widely distributed default rates without a clear income-related downward pattern.
 
 <p align="center">
-  <img src="images/Ph12.png" width="600">
+  <img src="Images/Ph12.png" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Ph13.png" width="600">
+  <img src="Images/Ph13.png" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Ph14.png" width="600">
+  <img src="Images/Ph14.png" width="600">
 </p>
 
 
@@ -111,7 +111,7 @@ The classification model was evaluated using accuracy, precision, recall, and F1
 The confusion matrix provides additional detail about the model's predictions. The model incorrectly predicted 1,401 actual default cases as non-defaults, representing false negatives. It also incorrectly predicted 6,001 actual non-default cases as defaults, representing false positives. These results show that the baseline model can identify a meaningful portion of default cases, but it also produces a considerable number of incorrect default predictions. As a baseline model, these results provide a measurable reference point for evaluating improvements in classification performance.
 
 <p align="center">
-  <img src="images/Ph15.png" width="600">
+  <img src="Images/Ph15.png" width="600">
 </p>
 
 ## 11. Key Findings

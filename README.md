@@ -19,7 +19,8 @@ Loan default can create financial losses for lending institutions and increase u
 ## 2. Data Used
 The analysis uses the Loan Default Dataset, publicly available through Kaggle. The dataset contains historical information about loan applications, borrowers, financial characteristics, credit information, property characteristics, and loan outcomes.
 
-Source: Kaggle — Loan Default Dataset [Loan Default Dataset – Kaggle](https://www.kaggle.com/datasets/yasserh/loan-default-dataset)
+Source: [Loan Default Dataset – Kaggle](https://www.kaggle.com/datasets/yasserh/loan-default-dataset)
+
 The dataset contains 148,670 observations and 34 features, including 33 predictor variables and one target variable (Status).
 
 ## 3. Analysis Approach and Methodology

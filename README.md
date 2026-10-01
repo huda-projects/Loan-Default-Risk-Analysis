@@ -122,7 +122,7 @@ The classification model was evaluated using accuracy, precision, recall, and F1
 The confusion matrix provides additional detail about the model's predictions. The model incorrectly predicted 1,401 actual default cases as non-defaults, representing false negatives. It also incorrectly predicted 6,001 actual non-default cases as defaults, representing false positives. These results show that the baseline model can identify a meaningful portion of default cases, but it also produces a considerable number of incorrect default predictions. As a baseline model, these results provide a measurable reference point for evaluating improvements in classification performance.
 
 <p align="center">
-  <img src="Images/Ph15.png" width="600">
+  <img src="Images/Ph15.png" width="500">
 </p>
 
 ## 11. Key Findings

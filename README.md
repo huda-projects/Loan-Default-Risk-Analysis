@@ -1,4 +1,5 @@
 # Loan Default Risk: Exploratory Data Analysis and Baseline Model.
+## By Huda Alsaud
 
 ## 1. Project Objective and Research Question.
 
@@ -12,12 +13,15 @@ A baseline classification model will then be developed to establish an initial b
 
 The results of the analysis will be used to answer the research question and provide information that may help financial institutions better understand credit risk and make more informed lending decisions.
 
+### Rationale
+Loan default can create financial losses for lending institutions and increase uncertainty when making credit decisions. Identifying borrower and loan characteristics associated with higher observed default risk can help financial institutions better understand lending risk and make more informed credit-risk decisions. This analysis is therefore relevant because it examines whether the available borrower and loan information can provide useful signals for identifying borrowers who may be at higher risk of default.
+
 ## 2. Data Used
 The analysis uses the Loan Default Dataset, publicly available through Kaggle. The dataset contains historical information about loan applications, borrowers, financial characteristics, credit information, property characteristics, and loan outcomes.
 Source: Kaggle — Loan Default Dataset
 The dataset contains 148,670 observations and 34 features, including 33 predictor variables and one target variable (Status).
 
-## 3. Analysis Approach
+## 3. Analysis Approach and Methodology
 The analysis will follow a structured process designed to move from understanding the raw data to developing an initial predictive model.
 First, the dataset will be inspected and cleaned to address issues such as missing values, duplicate observations, incorrect data types, and potentially invalid values. Next, exploratory data analysis will be conducted to examine distributions, patterns, and relationships among borrower characteristics, loan characteristics, and default outcomes.
 Outliers and unusual observations will also be investigated and feature engineering will then be used where appropriate.
@@ -125,9 +129,23 @@ The confusion matrix provides additional detail about the model's predictions. T
   <img src="Images/Ph15.png" width="500">
 </p>
 
-## 11. Key Findings
+## 11. Results and Key Findings
 The analysis identified several borrower and loan characteristics associated with different levels of observed default risk. The clearest patterns were found in Lump-Sum Payment and Negative Amortization, where borrowers with Lump-Sum Payment arrangements and Negative Amortization loans generally showed substantially higher observed default rates than borrowers in the corresponding categories. Loan type also showed meaningful differences, with Type 2 generally showing higher observed default rates than Type 1 across much of the analysis. Among numerical characteristics, lower income and higher Debt-to-Income Ratio were generally associated with higher observed default rates. Debt-to-Income Ratio also showed an important pattern across ranges, with the 50–60 range having the highest observed default rate at 42.67%.
 
 The analysis also showed that these patterns can vary when characteristics are considered together. For example, the relationship between Debt-to-Income Ratio  and default rates differed across loan types and payment characteristics, while income generally showed a negative association with observed default rates across most categories, except for Lump-Sum Payment arrangements, where default rates remained high and widely distributed. This indicates that default risk is better understood through a combination of borrower and loan characteristics rather than a single feature. For a financial institution, these combined patterns can provide useful information for identifying borrower groups that may require closer credit-risk assessment.
 
 Overall, the findings provide evidence that the dataset contains useful information for distinguishing borrowers associated with higher observed default risk. Classification modeling is therefore an important next step because it can consider multiple characteristics together and measure how effectively these patterns can be used to predict default and support more informed lending and credit-risk decisions.
+
+## 12. Next Steps
+The next steps will focus on improving and comparing the classification models. Additional models, including K-Nearest Neighbors, Decision Tree, and Support Vector Machine, can be evaluated alongside the baseline Logistic Regression model. Model performance will be compared using accuracy, precision, recall, and F1 score, with particular attention to identifying default cases. Further feature analysis and model optimization can also be explored to improve the ability to distinguish borrowers with different levels of observed default risk.
+
+## 13. Outline of project
+1. Define the project objective and research question.
+2. Review and prepare the loan default dataset.
+3. Clean the data and address missing values, duplicates, and anomalies.
+4. Conduct exploratory data analysis to identify patterns and relationships.
+5. Perform feature engineering and prepare the data for modeling.
+6. Encode categorical features and standardize numerical features.
+7. Develop a baseline Logistic Regression classification model.
+8. Evaluate the baseline model using accuracy, precision, recall, F1 score, and a confusion matrix.
+9. Summarize key findings and their relevance to lending and credit-risk decisions.

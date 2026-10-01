@@ -116,13 +116,13 @@ Moreover, Income shows a generally negative association with observed default ra
 </p>
 
 
-## 8. Preparing the Data for Modeling
+## 6. Preparing the Data for Modeling
 The cleaned dataset was prepared for classification modeling by converting categorical features into numerical indicator variables. The target variable, Status, was separated from the predictor features, and the data was divided into training and testing sets using stratified sampling to maintain a similar proportion of default and non-default observations in both sets. The numerical features were then standardized using the training data so that features with different scales could be used consistently by the classification model. These steps prepared the dataset for baseline classification modeling while keeping the original information available for analysis.
 
-## 9. Baseline Classification Model
+## 7. Baseline Classification Model
 A Logistic Regression classification model was developed as the baseline model for predicting loan default. The purpose of this model is to provide a measurable starting point against which additional models, improvements, and optimization techniques can be compared.
 
-## 10. Model Evaluation and Performance Metric
+## 8. Model Evaluation and Performance Metric
 The classification model was evaluated using accuracy, precision, recall, and F1 score. Since the dataset is imbalanced, multiple metrics were used instead of relying on accuracy alone. The baseline model achieved an accuracy of 69.27%, precision of 29.47%, recall of 64.16%, and an F1 score of 40.39%. The relatively low precision indicates that many observations predicted as defaults were actually non-defaults, while the recall of 64.16% shows that the model identified a substantial portion of the actual default cases.
 
 The confusion matrix provides additional detail about the model's predictions. The model incorrectly predicted 1,401 actual default cases as non-defaults, representing false negatives. It also incorrectly predicted 6,001 actual non-default cases as defaults, representing false positives. These results show that the baseline model can identify a meaningful portion of default cases, but it also produces a considerable number of incorrect default predictions. As a baseline model, these results provide a measurable reference point for evaluating improvements in classification performance.
@@ -131,17 +131,17 @@ The confusion matrix provides additional detail about the model's predictions. T
   <img src="Images/Ph15.png" width="500">
 </p>
 
-## 11. Results and Key Findings
+## 9. Results and Key Findings
 The analysis identified several borrower and loan characteristics associated with different levels of observed default risk. The clearest patterns were found in Lump-Sum Payment and Negative Amortization, where borrowers with Lump-Sum Payment arrangements and Negative Amortization loans generally showed substantially higher observed default rates than borrowers in the corresponding categories. Loan type also showed meaningful differences, with Type 2 generally showing higher observed default rates than Type 1 across much of the analysis. Among numerical characteristics, lower income and higher Debt-to-Income Ratio were generally associated with higher observed default rates. Debt-to-Income Ratio also showed an important pattern across ranges, with the 50–60 range having the highest observed default rate at 42.67%.
 
 The analysis also showed that these patterns can vary when characteristics are considered together. For example, the relationship between Debt-to-Income Ratio  and default rates differed across loan types and payment characteristics, while income generally showed a negative association with observed default rates across most categories, except for Lump-Sum Payment arrangements, where default rates remained high and widely distributed. This indicates that default risk is better understood through a combination of borrower and loan characteristics rather than a single feature. For a financial institution, these combined patterns can provide useful information for identifying borrower groups that may require closer credit-risk assessment.
 
 Overall, the findings provide evidence that the dataset contains useful information for distinguishing borrowers associated with higher observed default risk. Classification modeling is therefore an important next step because it can consider multiple characteristics together and measure how effectively these patterns can be used to predict default and support more informed lending and credit-risk decisions.
 
-## 12. Next Steps
+## 10. Next Steps
 The next steps will focus on improving and comparing the classification models. Additional models, including K-Nearest Neighbors, Decision Tree, and Support Vector Machine, can be evaluated alongside the baseline Logistic Regression model. Model performance will be compared using accuracy, precision, recall, and F1 score, with particular attention to identifying default cases. Further feature analysis and model optimization can also be explored to improve the ability to distinguish borrowers with different levels of observed default risk.
 
-## 13. Outline of project
+## 11. Outline of project
 1. Define the project objective and research question.
 2. Review and prepare the loan default dataset.
 3. Clean the data and address missing values, duplicates, and anomalies.
